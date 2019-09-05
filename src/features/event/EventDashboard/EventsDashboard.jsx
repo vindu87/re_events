@@ -111,9 +111,9 @@ handleUpdateEvent = (updatedEvent) => {
   }))
 }
 
-handleDeleteEvent = (id) =>{
+handleDeleteEvent = (id) => {
   this.setState(({events}) => ({
-    events: events.filter(e=>e.id !== id)
+    events: events.filter(e => e.id !== id)
   }))
 }
 
