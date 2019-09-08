@@ -9,6 +9,7 @@ import UserDetailedPage from "../../features/user/UserDetailed/UserDetailedPage"
 import SettingsDashboard from "../../features/user/Settings/SettingsDashboard";
 import EventForm from "../../features/event/EventForm/EventForm";
 import { Container } from "semantic-ui-react";
+//import TestComponent from "../../features/testarea/TestComponent";
 
 
 class App extends Component {
@@ -22,12 +23,14 @@ class App extends Component {
                 <Fragment>
                   <NavBar />
                     <Container className="main">   
-                      <Route path='/events' component={EventsDashboard} />
+                      <Route exact path='/events' component={EventsDashboard} />
                       <Route path='/events/:id' component={EventDetailedPage} />
                       <Route path='/people' component={PeopleDashboard} />
                       <Route path='/profile/:id' component={UserDetailedPage} />
                       <Route path='/settings' component={SettingsDashboard} />
                       <Route path='/createEvent' component={EventForm} />
+                      {/* <Route path='/test' component={TestComponent} /> */}
+
                     </Container>
                 </Fragment>    
               )} 
