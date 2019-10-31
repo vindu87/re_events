@@ -9,12 +9,14 @@ import UserDetailedPage from "../../features/user/UserDetailed/UserDetailedPage"
 import SettingsDashboard from "../../features/user/Settings/SettingsDashboard";
 import EventForm from "../../features/event/EventForm/EventForm";
 import { Container } from "semantic-ui-react";
-//import TestComponent from "../../features/testarea/TestComponent";
+import ModalManager from "../../features/modals/ModalManager";
+import TestComponent from "../../features/testarea/TestComponent";
 
 class App extends Component {
   render() {
     return (
       <Fragment>
+        <ModalManager />
         <Route exact path='/' component={HomePage} />
         <Route
           path='/(.+)'
@@ -32,7 +34,7 @@ class App extends Component {
                     path={["/createEvent", "/manage/:id"]}
                     component={EventForm}
                   />
-                  {/* <Route path='/test' component={TestComponent} /> */}
+                  <Route path='/test' component={TestComponent} />
                 </Switch>
               </Container>
             </Fragment>
