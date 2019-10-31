@@ -7,7 +7,6 @@ const initialState = {
 }
 
 const loginUser = (state, payload) => {
-    debugger;
     return {
         authenticated: true,
         currentUser: payload.creds.email
